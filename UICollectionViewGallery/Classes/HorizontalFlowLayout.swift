@@ -159,7 +159,7 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         let size = self.collectionView!.bounds.size
         let visibleRect = CGRect(x: contentOffset.x, y: contentOffset.y, width: size.width, height: size.height)
         
-        let mappedAttributes = attributes.flatMap({repositionAttributes(newAttr: $0,withOffset: offset,andCenter: visibleRect.midX)})
+        let mappedAttributes = attributes.compactMap({repositionAttributes(newAttr: $0,withOffset: offset,andCenter: visibleRect.midX)})
         return mappedAttributes
     }
     
