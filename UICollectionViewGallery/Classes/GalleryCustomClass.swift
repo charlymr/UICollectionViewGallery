@@ -84,7 +84,7 @@ extension UICollectionView {
         Gallery.sharedInstance.orientation = style
         Gallery.sharedInstance.orintationSupport = false
         self.isPagingEnabled = false
-        self.decelerationRate = UIScrollViewDecelerationRateFast
+        self.decelerationRate = UIScrollView.DecelerationRate.fast
         configureGallery()
     }
     /**

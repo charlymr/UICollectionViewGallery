@@ -38,7 +38,7 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         assert(self.collectionView!.numberOfSections <= 1, "You cannot use UICollectionViewGallery with more than 2 sections")
         self.used = self.collectionView!.numberOfItems(inSection: 0) >= MIN_NUMBER_OF_ITEMS_REQUIRED
         self.scrollDirection = .horizontal
-        self.sectionInset = UIEdgeInsetsMake(0, 0, 0, self.minimumLineSpacing)
+        self.sectionInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: self.minimumLineSpacing)
         self.collectionView!.showsHorizontalScrollIndicator = false
         self.collectionView!.showsVerticalScrollIndicator = false
         super.prepare()
@@ -75,7 +75,7 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
                 continue
             }
             
-            if fabs(attributes.center.x - proposedContentOffsetCenterX) < fabs(candidateAttributes!.center.x - proposedContentOffsetCenterX) {
+            if abs(attributes.center.x - proposedContentOffsetCenterX) < abs(candidateAttributes!.center.x - proposedContentOffsetCenterX) {
                 candidateAttributes = attributes
             }
         }
@@ -159,7 +159,8 @@ open class HorizontalFlowLayout: UICollectionViewFlowLayout {
         let size = self.collectionView!.bounds.size
         let visibleRect = CGRect(x: contentOffset.x, y: contentOffset.y, width: size.width, height: size.height)
         
-        let mappedAttributes = attributes.flatMap({repositionAttributes(newAttr: $0,withOffset: offset,andCenter: visibleRect.midX)})
+        let mappedAttributes = attributes.compactMap({repositionAttributes(newAttr: $0,withOffset: offset,andCenter: visibleRect.midX)})
+        
         return mappedAttributes
     }
     
