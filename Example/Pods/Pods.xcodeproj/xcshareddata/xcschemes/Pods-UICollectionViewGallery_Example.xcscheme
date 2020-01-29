@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A302D5B088F8C3597FC723581DAEB9A2"
+               BlueprintIdentifier = "83D437FC035CE07A1A77AC3443EB24BF"
                BuildableName = "Pods_UICollectionViewGallery_Example.framework"
                BlueprintName = "Pods-UICollectionViewGallery_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -45,14 +43,12 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A302D5B088F8C3597FC723581DAEB9A2"
+            BlueprintIdentifier = "83D437FC035CE07A1A77AC3443EB24BF"
             BuildableName = "Pods_UICollectionViewGallery_Example.framework"
             BlueprintName = "Pods-UICollectionViewGallery_Example"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
